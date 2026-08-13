@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Journal des consentements</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="wide">
+    <div class="top">
+      <div>
+        <h1>Journal des consentements</h1>
+        <p>Historique des réponses enregistrées.</p>
+      </div>
+      <a class="btn" href="/admin/export.csv">Exporter CSV</a>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th>ID preuve</th>
+            <th>Email</th>
+            <th>Réponse</th>
+            <th>Date UTC</th>
+            <th>IP</th>
+            <th>Navigateur</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for row in rows %}
+          <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td><strong>{{ row[2] }}</strong></td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td class="ua">{{ row[5] }}</td>
+          </tr>
+        {% else %}
+          <tr><td colspan="6">Aucun consentement pour le moment.</td></tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p><a href="/">Créer un lien</a></p>
+  </main>
+</body>
+</html>
