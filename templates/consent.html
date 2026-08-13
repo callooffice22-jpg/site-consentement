@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Votre consentement</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Confirmation de votre souhait d’être recontacté</h1>
+    <p>
+      Acceptez-vous d’être recontacté(e) concernant des offres et informations
+      relatives à la mutuelle santé ?
+    </p>
+    <p class="email">Adresse concernée : <strong>{{ email }}</strong></p>
+
+    <form method="post" class="choices">
+      <button class="yes" type="submit" name="consent" value="OUI">OUI, j’accepte d’être recontacté(e)</button>
+      <button class="no" type="submit" name="consent" value="NON">NON, je ne souhaite pas être recontacté(e)</button>
+    </form>
+
+    <p class="legal">
+      Votre choix est enregistré avec la date et l’heure, l’adresse IP utilisée,
+      les informations techniques du navigateur et un identifiant de preuve.
+      Ces éléments sont conservés afin de documenter votre choix.
+    </p>
+  </main>
+</body>
+</html>
