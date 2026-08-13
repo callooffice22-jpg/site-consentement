@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Générer un lien de consentement</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Créer un lien de consentement</h1>
+    <p>Entrez l’adresse e-mail du prospect pour générer un lien individuel.</p>
+    <form method="post" action="/create">
+      <label>E-mail du prospect</label>
+      <input type="email" name="email" placeholder="prospect@exemple.fr" required>
+      <button type="submit">Générer le lien</button>
+    </form>
+    <p class="small"><a href="/admin">Voir les consentements enregistrés</a></p>
+  </main>
+</body>
+</html>
