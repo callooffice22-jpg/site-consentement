@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Réponse déjà enregistrée</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="card center">
+    <h1>Réponse déjà enregistrée</h1>
+    <p>Ce lien a déjà été utilisé.</p>
+    <div class="proof">
+      <div>Réponse : <strong>{{ consent }}</strong></div>
+      <div>ID de preuve : <strong>{{ proof_id }}</strong></div>
+      <div>Horodatage UTC : {{ timestamp }}</div>
+    </div>
+  </main>
+</body>
+</html>
