@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lien créé</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Lien créé</h1>
+    <p>Prospect : <strong>{{ email }}</strong></p>
+    <p>Envoyez uniquement ce lien à ce prospect :</p>
+    <input class="linkbox" value="{{ link }}" readonly onclick="this.select()">
+    <p class="small">Chaque lien est unique et ne peut enregistrer qu’une seule réponse.</p>
+    <a class="btn secondary" href="/">Créer un autre lien</a>
+  </main>
+</body>
+</html>
